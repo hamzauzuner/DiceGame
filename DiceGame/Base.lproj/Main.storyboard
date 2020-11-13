@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,135 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiceGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dice Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcz-oS-6YB">
+                                <rect key="frame" x="105" y="406" width="205" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="BxF-yy-ri4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceGameLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cvt-XG-nem">
+                                <rect key="frame" x="87" y="158" width="240" height="237.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThY-hQ-u0J">
+                                <rect key="frame" x="135" y="567" width="145" height="76"/>
+                                <color key="backgroundColor" red="0.48653674130000002" green="0.23273244500000001" blue="0.55688995119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Play Now">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playNowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNo-r6-bBe"/>
+                                    <segue destination="7Gc-rC-k6n" kind="presentation" modalPresentationStyle="fullScreen" id="rOb-Wp-dss"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bcz-oS-6YB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0ZD-p8-agU"/>
+                            <constraint firstItem="bcz-oS-6YB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="5DQ-zy-MAm"/>
+                            <constraint firstItem="cvt-XG-nem" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="CfJ-7n-Jq4"/>
+                            <constraint firstItem="bcz-oS-6YB" firstAttribute="top" secondItem="cvt-XG-nem" secondAttribute="bottom" constant="10" id="FiN-6X-dlm"/>
+                            <constraint firstItem="cvt-XG-nem" firstAttribute="centerX" secondItem="bcz-oS-6YB" secondAttribute="centerX" id="KsZ-Wt-x14"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ThY-hQ-u0J" secondAttribute="bottom" constant="219" id="NbQ-UB-BW6"/>
+                            <constraint firstItem="cvt-XG-nem" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OxZ-Eu-71V"/>
+                            <constraint firstItem="ThY-hQ-u0J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="gF3-kQ-0Oe"/>
+                            <constraint firstItem="cvt-XG-nem" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="114" id="kIv-z7-eDI"/>
+                            <constraint firstItem="ThY-hQ-u0J" firstAttribute="top" secondItem="bcz-oS-6YB" secondAttribute="bottom" constant="76" id="qNa-ae-QbX"/>
+                            <constraint firstItem="bcz-oS-6YB" firstAttribute="centerX" secondItem="ThY-hQ-u0J" secondAttribute="centerX" id="qcC-Mi-2LD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playNowButton" destination="ThY-hQ-u0J" id="0Pc-vh-Uht"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+        <!--Shake View Controller-->
+        <scene sceneID="kd9-mT-qJB">
+            <objects>
+                <viewController id="7Gc-rC-k6n" customClass="ShakeViewController" customModule="DiceGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OnT-r2-hZm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="5HY-yD-hq3">
+                                <rect key="frame" x="39" y="334" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="gnD-Xt-BDJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice4" translatesAutoresizingMaskIntoConstraints="NO" id="wJB-tG-i1v">
+                                <rect key="frame" x="215" y="334" width="150" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dice Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmA-xH-DSc">
+                                <rect key="frame" x="91" y="88" width="145" height="68"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceGameLogo" translatesAutoresizingMaskIntoConstraints="NO" id="nGU-2b-Tor">
+                                <rect key="frame" x="20" y="88" width="76" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="4Ho-fu-eop"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please shake your device to roll the dice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ki0-cm-jMm">
+                                <rect key="frame" x="60" y="230" width="295" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="MLD-uW-QF7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99844974279999998" green="0.8065298796" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="5HY-yD-hq3" firstAttribute="top" secondItem="Ki0-cm-jMm" secondAttribute="bottom" constant="32" id="27F-98-rlW"/>
+                            <constraint firstItem="nGU-2b-Tor" firstAttribute="bottom" secondItem="RmA-xH-DSc" secondAttribute="bottom" id="7Mp-QU-Ykv"/>
+                            <constraint firstItem="SJl-28-TyS" firstAttribute="bottom" secondItem="5HY-yD-hq3" secondAttribute="bottom" constant="378" id="Erf-HC-67U"/>
+                            <constraint firstItem="Ki0-cm-jMm" firstAttribute="leading" secondItem="SJl-28-TyS" secondAttribute="leading" constant="60" id="Gi3-FH-6Rq"/>
+                            <constraint firstItem="Ki0-cm-jMm" firstAttribute="centerX" secondItem="OnT-r2-hZm" secondAttribute="centerX" id="GqX-u6-BLz"/>
+                            <constraint firstItem="SJl-28-TyS" firstAttribute="trailing" secondItem="wJB-tG-i1v" secondAttribute="trailing" constant="49" id="JEY-Zu-dUe"/>
+                            <constraint firstItem="5HY-yD-hq3" firstAttribute="top" secondItem="wJB-tG-i1v" secondAttribute="top" id="JRU-b1-gr2"/>
+                            <constraint firstItem="wJB-tG-i1v" firstAttribute="leading" secondItem="5HY-yD-hq3" secondAttribute="trailing" constant="26" id="QcB-DR-7OP"/>
+                            <constraint firstItem="nGU-2b-Tor" firstAttribute="leading" secondItem="OnT-r2-hZm" secondAttribute="leadingMargin" id="UiC-tJ-EhY"/>
+                            <constraint firstItem="5HY-yD-hq3" firstAttribute="leading" secondItem="SJl-28-TyS" secondAttribute="leading" constant="39" id="VUx-RV-slc"/>
+                            <constraint firstItem="5HY-yD-hq3" firstAttribute="bottom" secondItem="wJB-tG-i1v" secondAttribute="bottom" id="cIC-iI-FR9"/>
+                            <constraint firstItem="nGU-2b-Tor" firstAttribute="top" secondItem="SJl-28-TyS" secondAttribute="top" constant="44" id="feh-Le-7xE"/>
+                            <constraint firstItem="Ki0-cm-jMm" firstAttribute="top" secondItem="nGU-2b-Tor" secondAttribute="bottom" constant="74" id="lD3-nq-ufV"/>
+                            <constraint firstItem="SJl-28-TyS" firstAttribute="trailing" secondItem="RmA-xH-DSc" secondAttribute="trailing" constant="178" id="lRA-HT-evd"/>
+                            <constraint firstItem="SJl-28-TyS" firstAttribute="trailing" secondItem="nGU-2b-Tor" secondAttribute="trailing" constant="318" id="rwn-qw-uZo"/>
+                            <constraint firstItem="nGU-2b-Tor" firstAttribute="top" secondItem="RmA-xH-DSc" secondAttribute="top" id="wH8-9Q-MN5"/>
+                            <constraint firstItem="RmA-xH-DSc" firstAttribute="leading" secondItem="SJl-28-TyS" secondAttribute="leading" constant="91" id="xL1-VY-ift"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SJl-28-TyS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gTt-ah-z1F"/>
+                    <connections>
+                        <outlet property="firstDiceImageView" destination="5HY-yD-hq3" id="RFL-ar-kRW"/>
+                        <outlet property="secondDiceImageView" destination="wJB-tG-i1v" id="u5D-LT-otG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vld-sL-Pix" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860.86956521739137" y="116.51785714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Dice1" width="205" height="205"/>
+        <image name="Dice4" width="205" height="205"/>
+        <image name="DiceGameLogo" width="321" height="321"/>
+    </resources>
 </document>
